@@ -1,0 +1,81 @@
+Docker Installation : Ubuntu
+Sudo apt-cache search docker
+Sudo apt-get install docker.io
+Sudo docker -v
+Sudo systemctl status docker
+
+Client/server [images-container]
+
+Sudo docker search httpd
+Sudo docker images
+Sudo docker pull [name]
+Sudo docker pull eg.alpine
+Sudo df-h
+Sudo docker system df
+sudo docker create/run
+sudo docker ps
+sudo docker ps -a
+sudo docker run --name [docker-name] [image]
+sudo docker run -d [docker-name] [image]
+sudo docker exec -it [docker-name] /bin/sh {login}
+cd /bin
+sudo docker exec [docker-name] uname -a
+sudo docker stop 
+sudo docker start
+sudo docker stop
+sudo docker rm
+sudo docker logs
+sudo docker system prune
+
+
+
+
+Sudo services docker status
+Sudo service docker start
+Sudo useradd dockeradmin1
+Sudo passwd dockeradmin/89
+Sudo usermod -aG docker dockeradmin1
+Sudo cd opt/
+Sudo mkdir docker
+Sudo vi Dockerfile
+Sudo docker run -d -it --name [] -p [] []
+Sudo ip a
+Sudo docker inspect 
+Sudo docker history 
+Sudo docker save [] >busapp-backup.tar
+Sudo docker port
+
+
+if you want to create docker file using instructions and arguments
+FROM
+MAINTAINER
+LABEL
+EXPOSE
+ADD
+COPY
+RUN
+CMD
+ENTRYPOINT
+VOLUME
+USER
+WORKDIR
+ENV
+ARG
+
+sample-file :
+{
+  FROM ubuntu:latest
+  RUN apt-get update
+  RUN apt-get install
+  COPY index.html /var/www/html/index.html
+  EXPOSE so
+  CMD apachectl -D FOREGROUND
+}
+
+
+Sudo docker build.
+Sudo docker build -t []
+Sudo docker tag
+Sudo docker network inspect
+Sudo ping
+Sudo curl
